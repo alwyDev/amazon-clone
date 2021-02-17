@@ -1,0 +1,30 @@
+[debug] [2021-02-17T07:49:00.803Z] ----------------------------------------------------------------------
+[debug] [2021-02-17T07:49:00.812Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\lenovo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-02-17T07:49:00.812Z] CLI Version:   9.3.0
+[debug] [2021-02-17T07:49:00.812Z] Platform:      win32
+[debug] [2021-02-17T07:49:00.813Z] Node Version:  v12.18.3
+[debug] [2021-02-17T07:49:00.814Z] Time:          Wed Feb 17 2021 14:49:00 GMT+0700 (Western Indonesia Time)
+[debug] [2021-02-17T07:49:00.814Z] ----------------------------------------------------------------------
+[debug] [2021-02-17T07:49:00.814Z] 
+[debug] [2021-02-17T07:49:00.830Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-02-17T07:49:00.831Z] > authorizing via signed-in user
+[debug] [2021-02-17T07:49:00.831Z] [iam] checking project clone-ab2fb for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-02-17T07:49:00.836Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-02-17T07:49:00.836Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-02-17T07:49:11.962Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2021-02-17T07:49:11.964Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-02-17T07:49:11.964Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-02-17T07:49:11.970Z] [functions] service account IAM check errored, deploy may fail: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci {"name":"FirebaseError","children":[],"exit":1,"message":"Authentication Error: Your credentials are no longer valid. Please run \u001b[1mfirebase login --reauth\u001b[22m\n\nFor CI servers and headless environments, generate a new token with \u001b[1mfirebase login:ci\u001b[22m","status":500}
+[debug] [2021-02-17T07:49:11.976Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clone-ab2fb [none]
+[debug] [2021-02-17T07:49:11.985Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/clone-ab2fb
+[debug] [2021-02-17T07:49:12.006Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/clone-ab2fb
+    at Client.doRequest (C:\Users\lenovo\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:200:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[error] 
+[error] Error: Failed to get Firebase project clone-ab2fb. Please make sure the project exists and your account has permission to access it.
